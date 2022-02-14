@@ -1,0 +1,28 @@
+ALGORITHM insertion_sort
+
+VAR
+
+i,j,key: INTEGER;
+arr: ARRAY_OF INTEGER
+
+BEGIN
+
+  FOR i in arr STEP 1 DO
+
+   key:= arr;
+
+   j:= i-1;
+
+     WHILE(j>0 && arr[j] > key)
+
+        arr[j+1]:= arr[j];
+
+        j:= j-1;
+
+     END_WHILE
+
+   arr[j+1]:= key;
+
+  END_FOR
+
+END
