@@ -56,6 +56,7 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 50%;
 }
 
 .InputStyle {
@@ -109,4 +110,9 @@ input:focus {
   .firstLine {
     font-size: 20px;
   }
+}
+.text {
+  text-align: left;
+  font-weight: 900;
+  color: #ffffff;
 }
