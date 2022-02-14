@@ -1,0 +1,69 @@
+PROCEDURE dot_product(n: INTEGER, VAR ps: FLOAT, VAR v1,v2: ARRAY_OF INTEGER)
+
+VAR
+
+i,j: INTEGER;
+
+BEGIN
+  REPEAT
+    Read(n);
+  UNTIL
+    (n <= 0 OR n > 50);
+END
+
+BEGIN
+
+  FOR i FROM 0 TO n DO
+    READ v1[i];
+  END_FOR
+Write("V1 is ", v1);
+END
+
+BEGIN
+
+   FOR j FROM 0 TO n DO
+     READ v2[j];
+   END_FOR
+Write("V2 is ", v2);
+END
+
+BEGIN
+
+read v1;
+read v2;
+
+FOR i in v1 DO
+  FOR j in v2 DO
+    ps:= v1[i] * v2[j];
+  END_FOR
+END_FOR
+
+Write("Scalar product is ", ps)
+
+END 
+
+
+
+ALGORITHM determine_if_orthogonal
+
+VAR
+
+ps: FLOAT;
+v1, v2: ARRAY_OF INTEGER;
+
+BEGIN
+
+Read v1;
+Read v2;
+
+dot_product(v1, v2);
+
+Write dot_product(ps);
+
+IF (ps = 0) THEN
+   Write (v1 " and " v2 " are orthogonal");
+ELSE
+   Write (v1 " and " v2 " are not orthogonal");
+END_IF
+
+END
