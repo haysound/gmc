@@ -116,3 +116,8 @@ input:focus {
   font-weight: 900;
   color: #ffffff;
 }
+.firstImage,
+.secondIamge {
+  width: 100%;
+  margin: 10px;
+}
